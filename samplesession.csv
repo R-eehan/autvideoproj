@@ -1,0 +1,18 @@
+Automate:
+hashed_id(failed_for_testing)
+a97a73a584c3f36819ea8713a7b4c90c04b4d500
+e5543a2419b267ef4b674d89f895e215932235a0
+Requirements:
+session duration
+network log check
+- network_log true: 4a9a28cd29ef4808e9ce9da13bac612782166050 - Done
+session status and reason
+- status sess_id: 95ca82ce6a977fd573ceeadb83c4e3d3163e118c - Done
+check for mobile sessions and store appium logs and device type - In progress. Session ID= bf413f889dde5582b48ca2dca7b44b2f67eaab9e - Done
+
+App Automate: IN PROGRESS
+Things to check-
+See if using a Decorator will help for common variables in Aut and App Aut.
+Different api URL for app-automate, will need two functions with decorator(possibly)
+
+if request.form.get('app_automate') == 'on':

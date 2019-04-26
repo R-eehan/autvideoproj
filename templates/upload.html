@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automate Debugger</title>
+</head>
+    <body>
+        <form action="upload.html" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileToUpload" accept="text/csv">
+            <input type="submit" value="Upload File" name="submit">
+            <br>
+            Check for App Automate:
+            <input type="checkbox" name="app_automate" id="app_automate">
+            <br>
+        </form>
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </body>
+</html>
