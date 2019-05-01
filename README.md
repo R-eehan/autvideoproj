@@ -25,13 +25,17 @@ The application accepts a CSV file containing all the session IDs of a particula
 
 This CSV file is to be obtained by executing a BigQuery command. The command is as follows:
 
-```SELECT hashed_id
+```SELECT
+ hashed_id
 FROM
-  [browserstack-1299:automate.partitioned_automation_session_stats]
+ [browserstack-1299:automate.partitioned_automation_session_stats]
 WHERE
-  created_day >= "<date of your choice>"
-  AND created_day <= "<date of your choice>"
-  AND group_id= <group_id>
+ _PARTITIONTIME >= "2019-04-28 00:00:00<start_date>"
+ AND _PARTITIONTIME < "2019-05-01 00:00:00<end_date>"
+ AND created_day >= "2019-04-28 00:00:00<start_date>"
+ AND created_day < "2019-05-01 00:00:00<end_date>"
+ AND group_id= <group_id>
+
 ```
 
 **_Alter the BigQuery command as per your requirement i.e either for the Automate or App Automate product._**
