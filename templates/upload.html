@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Automate Debugger</title>
-</head>
-    <body>
-        <form action="upload.html" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" id="fileToUpload" accept="text/csv">
-            <input type="submit" value="Upload File" name="submit">
-            <br>
-            Check for App Automate:
-            <input type="checkbox" name="app_automate" id="app_automate">
-            <br>
-        </form>
-        {% if error %}
+  <head>
+    <title>Automate Debugger</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+  </head>
+  <body>
+    <div class="log-form file-upload-form">
+      <form action="upload.html" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileToUpload" accept="text/csv">
+        <div class="check_app_automate">
+          <label>Check for App Automate:</label>
+          <input type="checkbox" name="app_automate" id="app_automate">
+        </div>
+        <input class="btn" type="submit" value="Upload File" name="submit">
+      </form>
+      {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
         {% endif %}
+      </div>
     </body>
-</html>
+  </html>
