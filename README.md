@@ -25,7 +25,8 @@ The application accepts a CSV file containing all the session IDs of a particula
 
 This CSV file is to be obtained by executing a BigQuery command. The command is as follows:
 
-```SELECT
+```
+ SELECT
  hashed_id
 FROM
  [browserstack-1299:automate.partitioned_automation_session_stats]
